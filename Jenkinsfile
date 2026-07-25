@@ -2,9 +2,28 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello Jenkins') {
+
+        stage('Checkout') {
             steps {
-                echo 'My first Jenkins Pipeline'
+                checkout scm
+            }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                bat 'npm install'
+            }
+        }
+
+        stage('Install Browsers') {
+            steps {
+                bat 'npx playwright install'
+            }
+        }
+
+        stage('Run Tests') {
+            steps {
+                bat 'npx playwright test'
             }
         }
     }
