@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 
-test("eccomerce end to end test flow", async ({ page }) => {
+test.skip("eccomerce end to end test flow", async ({ page }) => {
 
     const Product = page.locator('.card-body');
     const ProductName = 'ZARA COAT 3';

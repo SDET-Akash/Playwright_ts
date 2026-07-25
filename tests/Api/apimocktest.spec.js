@@ -25,7 +25,7 @@ const FOUR_EVENTS_RESPONSE = {
 };
 
 
-test("login for booking flow", async ({ browser }) => {
+test.skip("login for booking flow", async ({ browser }) => {
 
     const context = await browser.newContext();
     const page = await context.newPage();

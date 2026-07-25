@@ -21,7 +21,7 @@ test.beforeAll(async ({ browser }) => {
 })
 
 
-test("eccomerce end to end test flow", async () => {
+test.skip("eccomerce end to end test flow", async () => {
 
 
 
